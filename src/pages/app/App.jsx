@@ -1,9 +1,10 @@
-import './App.css';
+import { Login } from 'pages/login/Login';
+import './App.scss';
 
 export const App = () => {
   return (
     <div className='App'>
-      Social Media App
+      <Login />
     </div>
   );
 };
