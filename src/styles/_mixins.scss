@@ -33,3 +33,9 @@
 		color: $backgroundColor;
 	}
 }
+
+@mixin image($imageUrl) {
+	background: linear-gradient(rgba(32, 11, 96, 0.5), rgba(32, 11, 96, 0.5)),
+		$imageUrl center;
+	background-size: cover;
+}

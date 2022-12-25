@@ -2,7 +2,7 @@
 @import '../../styles/_variables.scss';
 @use '../../styles/_mixins.scss';
 
-.login {
+.register {
 	@include flex-row-center;
 	background-color: $purpleMainBackground;
 	width: 100%;
@@ -11,14 +11,15 @@
 	.card {
 		background-color: $white;
 		border-radius: $radiusMedium;
+		width: 50%;
 		min-height: 600px;
 		display: flex;
+		flex-direction: row-reverse;
 		overflow: hidden;
-		width: 50%;
 
 		.left {
 			@include image(
-				url('https://images.pexels.com/photos/4406642/pexels-photo-4406642.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')
+				url('https://images.pexels.com/photos/14768653/pexels-photo-14768653.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')
 			);
 			@include flex-column-center-y;
 			color: $white;
