@@ -1,0 +1,35 @@
+@import './variables.scss';
+
+@mixin flex-column-center-y {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@mixin flex-row-center {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+@mixin button($color, $backgroundColor) {
+	width: 50%;
+	padding: 10px;
+	border: none;
+	background-color: $backgroundColor;
+	color: $color;
+	font-weight: $bold;
+	cursor: pointer;
+	transition: $durationShort;
+	border-radius: $radiusSmall;
+	font-family: Arial, Helvetica, sans-serif;
+
+	@if $backgroundColor != $white {
+		border: 1px solid $backgroundColor;
+	}
+
+	&:hover {
+		background-color: $color;
+		color: $backgroundColor;
+	}
+}
