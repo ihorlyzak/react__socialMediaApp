@@ -1,8 +1,9 @@
 import { Home, Profile } from 'components';
-import { Layout } from 'layouts/Layout';
 import { Register } from 'pages/register/Register';
 import { Login } from 'pages/login/Login';
 import { createBrowserRouter } from 'react-router-dom';
+
+import { Layout } from 'layouts';
 
 import { ProtectedRoute } from './protectedRoute';
 
