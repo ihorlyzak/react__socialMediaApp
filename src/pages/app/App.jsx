@@ -2,12 +2,15 @@ import { Home, LeftBar, Navbar, Profile, RightBar } from 'components';
 import { Login, Register } from 'pages';
 import {
   createBrowserRouter,
+  Navigate,
   Outlet,
   RouterProvider,
 } from 'react-router-dom';
 import './App.scss';
 
 export const App = () => {
+  const currentUser = false;
+
   const Layout = () => {
     return (
       <div>
@@ -24,10 +27,18 @@ export const App = () => {
     );
   };
 
+  const ProtectedRoute = ({ children }) => {
+    if (!currentUser) {
+      return <Navigate to='/login' />;
+    }
+
+    return children;
+  };
+
   const router = createBrowserRouter([
     {
       path: '/',
-      element: <Layout />,
+      element: <ProtectedRoute><Layout /></ProtectedRoute>,
       children: [
         {
           path: '/',
